@@ -5,10 +5,7 @@ import java.util.Arrays;
 
 
 public class Solution {
-    public String greatestCommonDivisorOfStrings(){
-
-        String str1 = "LEET";
-        String str2 = "CODE";
+    public String greatestCommonDivisorOfStrings(String str1,String str2){
 
         int gcdValue = gcd(str1.length(),str2.length());
         System.out.println(gcdValue);
@@ -18,10 +15,8 @@ public class Solution {
         Boolean str1Check = gcdValueSubstring.repeat(str1.length()/gcdValue).equals(str1);
         Boolean str2Check = gcdValueSubstring.repeat(str2.length()/gcdValue).equals(str2);
 
-        System.out.println("true");
-
         String results  = str1Check && str2Check ? gcdValueSubstring : "";
-
+        System.out.println(results);
         return results;
     }
 
@@ -32,9 +27,8 @@ public class Solution {
         // r is the remainder if (a / b) => r = a % b
         // if b is not equal to 0 then b becomes a and r becomes b
         // The recursive loop continues till we get b to be zero
-        if(b == 0){
-            return a;
-        }
+        if(b == 0) return a;
+
        return gcd(b,a%b);
     }
 

@@ -1,4 +1,5 @@
 
+import java.util.Locale;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -31,10 +32,16 @@ class Helper {
     public static void greatestCommonDivisorofStrings(){
 
         GreatestCommonDivisorofStrings.Solution solution = new GreatestCommonDivisorofStrings.Solution();
-        solution.greatestCommonDivisorOfStrings();
-//        mergeStringsAlternately();
-//        System.out.println("Hello how are you doing" + solution.greatestCommonDivisorOfStrings());
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter first word: ");
+        String word1 = scanner.next();
+        System.out.println("Enter second word: ");
+        String word2 = scanner.next();
 
+        String results = solution.greatestCommonDivisorOfStrings(word1.toUpperCase(), word2.toUpperCase());
+        System.out.println("Greatest common divisor: " + results);
+
+        scanner.close();
     }
 }
