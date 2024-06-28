@@ -7,6 +7,8 @@ import java.util.Arrays;
 public class Solution {
     public String greatestCommonDivisorOfStrings(String str1,String str2){
 
+        if(str1.length() == 0 || str2.length() == 0) return "";
+
         int gcdValue = gcd(str1.length(),str2.length());
         System.out.println(gcdValue);
 

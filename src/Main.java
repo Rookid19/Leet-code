@@ -35,9 +35,9 @@ class Helper {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first word: ");
-        String word1 = scanner.next();
+        String word1 = "ABC";//scanner.next();
         System.out.println("Enter second word: ");
-        String word2 = scanner.next();
+        String word2 = ""; //scanner.next();
 
         String results = solution.greatestCommonDivisorOfStrings(word1.toUpperCase(), word2.toUpperCase());
         System.out.println("Greatest common divisor: " + results);
